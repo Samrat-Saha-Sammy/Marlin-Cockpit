@@ -7,4 +7,5 @@
   Online Marlin Configuration Generator
 </p>
 
-# Build with Angular, Bootstrap, NodeJS & MongoDB
+## Marlin Cockpit v1
+Build with Angular, Bootstrap, NodeJS & MongoDB
