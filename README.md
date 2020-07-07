@@ -1,2 +1,2 @@
-# Marlin-Cockpit
-Marlin Configuration Creator
+# <center>Marlin Cockpit</center>
+<center>Marlin Configuration Creator</center>
