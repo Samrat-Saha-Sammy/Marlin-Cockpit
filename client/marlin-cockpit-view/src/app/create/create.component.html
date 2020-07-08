@@ -6,90 +6,19 @@
         <div class="col-3 px-0">
           <div id="sidebar-wrapper" class="scrollbar">
             <ul>
-              <li>
+              <li *ngFor="let step of stepList">
                 <a href="">
                   <div class="title-wrapper">
                     <div class="icon">
                       <i class="mdi mdi-account-multiple-outline"></i>
                     </div>
                     <h6 class="title">
-                      <span class="badge badge-secondary mr-2">1</span>Base
-                      Variant
+                      <span class="badge badge-secondary mr-2">{{
+                        step.stepNo
+                      }}</span
+                      >{{ step.title }}
                     </h6>
-                    <p class="sub-title">Marlin Version Configuration</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <div class="title-wrapper">
-                    <div class="icon">
-                      <i class="mdi mdi-account-multiple-outline"></i>
-                    </div>
-                    <h6 class="title">
-                      <span class="badge badge-secondary mr-2">2</span>Firmware
-                      Info
-                    </h6>
-                    <p class="sub-title">Boot Screen Configuration</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <div class="title-wrapper">
-                    <div class="icon">
-                      <i class="mdi mdi-account-multiple-outline"></i>
-                    </div>
-                    <h6 class="title">
-                      <span class="badge badge-secondary mr-2">3</span>Hardware
-                      Info
-                    </h6>
-                    <p class="sub-title">Hardware Details Configuration</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <div class="title-wrapper">
-                    <div class="icon">
-                      <i class="mdi mdi-account-multiple-outline"></i>
-                    </div>
-                    <h6 class="title">Dimention</h6>
-                    <p class="sub-title">Overall Printer Size</p>
-                  </div>
-                </a>
-              </li>
-
-              <li>
-                <a href="">
-                  <div class="title-wrapper">
-                    <div class="icon">
-                      <i class="mdi mdi-account-multiple-outline"></i>
-                    </div>
-                    <h6 class="title">Login</h6>
-                    <p class="sub-title">Lorem ipsum dolor.</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <div class="title-wrapper">
-                    <div class="icon">
-                      <i class="mdi mdi-account-multiple-outline"></i>
-                    </div>
-                    <h6 class="title">Login</h6>
-                    <p class="sub-title">Lorem ipsum dolor.</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="">
-                  <div class="title-wrapper">
-                    <div class="icon">
-                      <i class="mdi mdi-account-multiple-outline"></i>
-                    </div>
-                    <h6 class="title">Login</h6>
-                    <p class="sub-title">Lorem ipsum dolor.</p>
+                    <p class="sub-title">{{ step.subTitle }}</p>
                   </div>
                 </a>
               </li>
@@ -101,7 +30,7 @@
           <!-- Page Content -->
           <div id="page-content-wrapper" class="scrollbar">
             <div class="container-fluid my-5">
-              <ng-container>
+              <!-- <ng-container>
                 <h4 class="section-heading">
                   <span class="badge badge-secondary mr-2">Step 1</span
                   >Configure Base Variant
@@ -149,8 +78,8 @@
                     </button>
                   </div>
                 </form>
-              </ng-container>
-              <ng-container>
+              </ng-container> -->
+              <!-- <ng-container>
                 <h4 class="section-heading">
                   <span class="badge badge-secondary mr-2">Step 2</span
                   >Configure Firmware Info
@@ -189,14 +118,14 @@
                       reboots and M115.
                     </small>
                   </div>
-                  <div class="form-group form-check">
+                  <div class="form-group custom-control custom-switch">
                     <input
                       type="checkbox"
-                      class="form-check-input"
+                      class="custom-control-input"
                       aria-describedby="bootScreenHelp"
                       id="exampleCheck1"
                     />
-                    <label class="form-check-label" for="exampleCheck1"
+                    <label class="custom-control-label" for="exampleCheck1"
                       >Enable Boot Screen Image</label
                     >
                     <small id="bootscreenHelp" class="form-text text-muted">
@@ -204,14 +133,14 @@
                       boot screen for LCD controllers.
                     </small>
                   </div>
-                  <div class="form-group form-check">
+                  <div class="form-group custom-control custom-switch">
                     <input
                       type="checkbox"
-                      class="form-check-input"
+                      class="custom-control-input"
                       aria-describedby="custombootscreenHelp"
-                      id="exampleCheck1"
+                      id="exampleCheck2"
                     />
-                    <label class="form-check-label" for="exampleCheck1">
+                    <label class="custom-control-label" for="exampleCheck2">
                       Enable Custom Image on Boot Screen
                     </label>
                     <small
@@ -222,14 +151,14 @@
                       shows the bitmap in Marlin/_Bootscreen.h on startup.
                     </small>
                   </div>
-                  <div class="form-group form-check">
+                  <div class="form-group custom-control custom-switch">
                     <input
                       type="checkbox"
-                      class="form-check-input"
+                      class="custom-control-input"
                       aria-describedby="customStatusScreenHelp"
-                      id="exampleCheck1"
+                      id="exampleCheck3"
                     />
-                    <label class="form-check-label" for="exampleCheck1">
+                    <label class="custom-control-label" for="exampleCheck3">
                       Enable Custom Image on Status Screen
                     </label>
                     <small
@@ -258,7 +187,7 @@
                     </div>
                   </div>
                 </form>
-              </ng-container>
+              </ng-container> -->
               <ng-container>
                 <h4 class="section-heading">
                   <span class="badge badge-secondary mr-2">Step 3</span
@@ -316,14 +245,14 @@
                       by the Arduino bootloader.
                     </small>
                   </div>
-                  <div class="form-group form-check">
+                  <div class="form-group custom-control custom-switch">
                     <input
                       type="checkbox"
-                      class="form-check-input"
+                      class="custom-control-input"
                       aria-describedby="serialPort2Help"
-                      id="exampleCheck1"
+                      id="exampleCheck4"
                     />
-                    <label class="form-check-label" for="exampleCheck1"
+                    <label class="custom-control-label" for="exampleCheck4"
                       >Enable Secondary Serial Port</label
                     >
                     <small id="serialPort2Help" class="form-text text-muted">
@@ -400,14 +329,14 @@
                       57600
                     </small>
                   </div>
-                  <div class="form-group form-check">
+                  <div class="form-group custom-control custom-switch">
                     <input
                       type="checkbox"
-                      class="form-check-input"
+                      class="custom-control-input"
                       aria-describedby="custombootscreenHelp"
-                      id="exampleCheck1"
+                      id="exampleCheck5"
                     />
-                    <label class="form-check-label" for="exampleCheck1">
+                    <label class="custom-control-label" for="exampleCheck5">
                       Enable Bluetooth
                     </label>
                     <small
@@ -419,23 +348,81 @@
                       the AT90USB.
                     </small>
                   </div>
-                  <div class="form-group form-check">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">MOTHERBOARD</label>
+                    <select
+                      class="form-control custom-select"
+                      id="exampleFormControlSelect1"
+                      aria-describedby="motherboardHelp"
+                    >
+                      <option>BOARD_RAMPS_14_EFB</option>
+                    </select>
+                    <small id="motherboardHelp" class="form-text text-muted">
+                      <code><strong>MOTHERBOARD</strong></code> The most
+                      important setting is Marlin is the motherboard. The
+                      firmware needs to know what board it will be running on so
+                      it can assign the right functions to all pins and take
+                      advantage of the full capabilities of the board. Setting
+                      this incorrectly will lead to unpredictable results.
+                    </small>
+                  </div>
+
+                  <div class="form-group custom-control custom-switch">
                     <input
                       type="checkbox"
-                      class="form-check-input"
-                      aria-describedby="customStatusScreenHelp"
-                      id="exampleCheck1"
+                      class="custom-control-input"
+                      aria-describedby="serialPort2Help"
+                      id="exampleCheck6"
                     />
-                    <label class="form-check-label" for="exampleCheck1">
-                      Enable Custom Image on Status Screen
-                    </label>
-                    <small
-                      id="customStatusScreenHelp"
-                      class="form-text text-muted"
+                    <label class="custom-control-label" for="exampleCheck6"
+                      >Enable Custom Machine Name</label
                     >
-                      <code><strong>CUSTOM_STATUS_SCREEN_IMAGE</strong> </code>
-                      shows the bitmap in Marlin/_Statusscreen.h on the status
-                      screen.
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Custom Machine Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="customMachineHelp"
+                      placeholder="Enter machine name"
+                      value=""
+                    />
+                    <small id="customMachineHelp" class="form-text text-muted">
+                      <code><strong>CUSTOM_MACHINE_NAME</strong></code> This is
+                      the name of your printer as displayed on the LCD and by
+                      M115. For example, if you set this to “My Delta” the LCD
+                      will display “My Delta ready” when the printer starts up.
+                    </small>
+                  </div>
+
+                  <div class="form-group custom-control custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      aria-describedby="serialPort2Help"
+                      id="exampleCheck7"
+                    />
+                    <label class="custom-control-label" for="exampleCheck7"
+                      >Enable Custom Machine UUID</label
+                    >
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Custom Machine UUID</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="customMachineHelp"
+                      placeholder="Enter machine UUID"
+                      value=""
+                    />
+                    <small id="customMachineHelp" class="form-text text-muted">
+                      <code><strong>MACHINE_UUID</strong></code> A unique ID for
+                      your 3D printer. A suitable unique ID can be generated
+                      randomly at uuidtools.com. Some host programs and slicers
+                      may use this identifier to differentiate between specific
+                      machines on your network.
                     </small>
                   </div>
 
