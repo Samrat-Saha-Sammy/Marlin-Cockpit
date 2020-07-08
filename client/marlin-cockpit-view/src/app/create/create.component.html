@@ -1,93 +1,508 @@
-
 <div class="row mx-0">
-    <div class="col-12">
-      <div id="wrapper">
-        <!-- Sidebar -->
-        <div class="row px-0">
-          <div class="col-3 px-0">
-            <div id="sidebar-wrapper">
-              <ul>
-                <li>
-                    <a href="">
-                      <div class="title-wrapper">
-                        <div class="icon">
-                          <i class="mdi mdi-account-multiple-outline"></i>
-                        </div>
-                        <h6 class="title">Base Variant</h6>
-                      <p class="sub-title">Marlin Version Configuration</p>
-                      </div>
-                    </a>
-                  </li>
-                <li>
-                  <a href="">
-                    <div class="title-wrapper">
-                      <div class="icon">
-                        <i class="mdi mdi-account-multiple-outline"></i>
-                      </div>
-                      <h6 class="title">Dimention</h6>
-                      <p class="sub-title">Overall Printer Size</p>
+  <div class="col-12">
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <div class="row px-0">
+        <div class="col-3 px-0">
+          <div id="sidebar-wrapper" class="scrollbar">
+            <ul>
+              <li>
+                <a href="">
+                  <div class="title-wrapper">
+                    <div class="icon">
+                      <i class="mdi mdi-account-multiple-outline"></i>
                     </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <div class="title-wrapper">
-                      <div class="icon">
-                        <i class="mdi mdi-account-multiple-outline"></i>
-                      </div>
-                      <h6 class="title">Bootscreen</h6>
-                      <p class="sub-title">Configure BootScreen</p>
+                    <h6 class="title">
+                      <span class="badge badge-secondary mr-2">1</span>Base
+                      Variant
+                    </h6>
+                    <p class="sub-title">Marlin Version Configuration</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <div class="title-wrapper">
+                    <div class="icon">
+                      <i class="mdi mdi-account-multiple-outline"></i>
                     </div>
-                  </a>
-                </li>
-                
-                <li>
-                  <a href="">
-                    <div class="title-wrapper">
-                      <div class="icon">
-                        <i class="mdi mdi-account-multiple-outline"></i>
-                      </div>
-                      <h6 class="title">Login</h6>
-                      <p class="sub-title">Lorem ipsum dolor.</p>
+                    <h6 class="title">
+                      <span class="badge badge-secondary mr-2">2</span>Firmware
+                      Info
+                    </h6>
+                    <p class="sub-title">Boot Screen Configuration</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <div class="title-wrapper">
+                    <div class="icon">
+                      <i class="mdi mdi-account-multiple-outline"></i>
                     </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <div class="title-wrapper">
-                      <div class="icon">
-                        <i class="mdi mdi-account-multiple-outline"></i>
-                      </div>
-                      <h6 class="title">Login</h6>
-                      <p class="sub-title">Lorem ipsum dolor.</p>
+                    <h6 class="title">
+                      <span class="badge badge-secondary mr-2">3</span>Hardware
+                      Info
+                    </h6>
+                    <p class="sub-title">Hardware Details Configuration</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <div class="title-wrapper">
+                    <div class="icon">
+                      <i class="mdi mdi-account-multiple-outline"></i>
                     </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    <div class="title-wrapper">
-                      <div class="icon">
-                        <i class="mdi mdi-account-multiple-outline"></i>
-                      </div>
-                      <h6 class="title">Login</h6>
-                      <p class="sub-title">Lorem ipsum dolor.</p>
+                    <h6 class="title">Dimention</h6>
+                    <p class="sub-title">Overall Printer Size</p>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a href="">
+                  <div class="title-wrapper">
+                    <div class="icon">
+                      <i class="mdi mdi-account-multiple-outline"></i>
                     </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
+                    <h6 class="title">Login</h6>
+                    <p class="sub-title">Lorem ipsum dolor.</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <div class="title-wrapper">
+                    <div class="icon">
+                      <i class="mdi mdi-account-multiple-outline"></i>
+                    </div>
+                    <h6 class="title">Login</h6>
+                    <p class="sub-title">Lorem ipsum dolor.</p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <div class="title-wrapper">
+                    <div class="icon">
+                      <i class="mdi mdi-account-multiple-outline"></i>
+                    </div>
+                    <h6 class="title">Login</h6>
+                    <p class="sub-title">Lorem ipsum dolor.</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
           </div>
-  
-          <div class="col-9 px-0">
-            <!-- Page Content -->
-            <div id="page-content-wrapper">
-              <div class="container-fluid my-5">
+        </div>
+
+        <div class="col-9 px-0">
+          <!-- Page Content -->
+          <div id="page-content-wrapper" class="scrollbar">
+            <div class="container-fluid my-5">
+              <ng-container>
+                <h4 class="section-heading">
+                  <span class="badge badge-secondary mr-2">Step 1</span
+                  >Configure Base Variant
+                </h4>
+                <p>
+                  Marlin now checks for a configuration version and won’t
+                  compile without this setting. If you want to upgrade from an
+                  earlier version of Marlin, add this line to your old
+                  configuration file. During compilation, Marlin will throw
+                  errors explaining what needs to be changed.
+                </p>
+                <form>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1"
+                      >Marlin Version</label
+                    >
+                    <select
+                      class="form-control custom-select"
+                      id="exampleFormControlSelect1"
+                    >
+                      <option>2.0.5.3</option>
+                      <option>2.0.5.2</option>
+                      <option>2.0.5.1</option>
+                      <option>2.0.5</option>
+                      <option>2.0.4.4</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1"
+                      >Configuration versioning</label
+                    >
+                    <select
+                      class="form-control custom-select"
+                      id="exampleFormControlSelect1"
+                    >
+                      <option>020005</option>
+                    </select>
+                  </div>
+                  <div class="text-right my-5">
+                    <button type="submit" class="btn btn-success mr-2">
+                      Save
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                      Next Step
+                    </button>
+                  </div>
+                </form>
+              </ng-container>
+              <ng-container>
+                <h4 class="section-heading">
+                  <span class="badge badge-secondary mr-2">Step 2</span
+                  >Configure Firmware Info
+                </h4>
+                <p>
+                  Marlin allows you to add a custom boot image for Graphical
+                  LCDs. With this option Marlin will first show your custom
+                  screen followed by the standard Marlin logo with version
+                  number and web URL.
+                </p>
+                <P>
+                  We encourage you to take advantage of this new feature and we
+                  also respectfully request that you retain the unmodified
+                  Marlin boot screen.
+                </P>
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1"
+                      >Author Name, Version Details</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="authorHelp"
+                      placeholder="Enter email"
+                      value="(none, default config)"
+                    />
+                    <small id="authorHelp" class="form-text text-muted">
+                      <code><strong>STRING_CONFIG_H_AUTHOR</strong></code> is
+                      shown in the Marlin startup message, and is meant to
+                      identify the author (and optional variant) of the
+                      firmware. Use this setting as a way to uniquely identify
+                      all your custom configurations. The startup message is
+                      printed when connecting to host software, when the board
+                      reboots and M115.
+                    </small>
+                  </div>
+                  <div class="form-group form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      aria-describedby="bootScreenHelp"
+                      id="exampleCheck1"
+                    />
+                    <label class="form-check-label" for="exampleCheck1"
+                      >Enable Boot Screen Image</label
+                    >
+                    <small id="bootscreenHelp" class="form-text text-muted">
+                      <code><strong>SHOW_BOOTSCREEN</strong></code> enables the
+                      boot screen for LCD controllers.
+                    </small>
+                  </div>
+                  <div class="form-group form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      aria-describedby="custombootscreenHelp"
+                      id="exampleCheck1"
+                    />
+                    <label class="form-check-label" for="exampleCheck1">
+                      Enable Custom Image on Boot Screen
+                    </label>
+                    <small
+                      id="customBootScreenHelp"
+                      class="form-text text-muted"
+                    >
+                      <code><strong>SHOW_CUSTOM_BOOTSCREEN</strong> </code>
+                      shows the bitmap in Marlin/_Bootscreen.h on startup.
+                    </small>
+                  </div>
+                  <div class="form-group form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      aria-describedby="customStatusScreenHelp"
+                      id="exampleCheck1"
+                    />
+                    <label class="form-check-label" for="exampleCheck1">
+                      Enable Custom Image on Status Screen
+                    </label>
+                    <small
+                      id="customStatusScreenHelp"
+                      class="form-text text-muted"
+                    >
+                      <code><strong>CUSTOM_STATUS_SCREEN_IMAGE</strong> </code>
+                      shows the bitmap in Marlin/_Statusscreen.h on the status
+                      screen.
+                    </small>
+                  </div>
+
+                  <div class="row my-5">
+                    <div class="col-6 text-left">
+                      <button type="button" class="btn btn-primary">
+                        Prev Step
+                      </button>
+                    </div>
+                    <div class="col-6 text-right">
+                      <button type="submit" class="btn btn-success mr-2">
+                        Save
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Next Step
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </ng-container>
+              <ng-container>
+                <h4 class="section-heading">
+                  <span class="badge badge-secondary mr-2">Step 3</span
+                  >Configure Hardware Info
+                </h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam.
+                </p>
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Serial Port</label>
+                    <div
+                      class="btn-group block"
+                      role="group"
+                      aria-label="Serial Port"
+                      aria-describedby="serialPortHelp"
+                    >
+                      <button type="button" class="btn btn-success">
+                        -1
+                      </button>
+                      <button type="button" class="btn btn-success">
+                        0
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        1
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        2
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        3
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        4
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        5
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        6
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        7
+                      </button>
+                    </div>
+                    <small id="serialPortHelp" class="form-text text-muted">
+                      <code><strong>SERIAL_PORT</strong></code> The index of the
+                      on-board serial port that will be used for primary host
+                      communication. Change this if, for example, you need to
+                      connect a wireless adapter to non-default port pins.
+                      <br />
+                      Note: The first serial port (-1 or 0) will always be used
+                      by the Arduino bootloader.
+                    </small>
+                  </div>
+                  <div class="form-group form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      aria-describedby="serialPort2Help"
+                      id="exampleCheck1"
+                    />
+                    <label class="form-check-label" for="exampleCheck1"
+                      >Enable Secondary Serial Port</label
+                    >
+                    <small id="serialPort2Help" class="form-text text-muted">
+                      <code><strong>SERIAL_PORT_2</strong></code> Enable this if
+                      your board has a secondary serial port.
+                    </small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Serial Port 2</label>
+                    <div
+                      class="btn-group block"
+                      role="group"
+                      aria-label="Serial Port"
+                      aria-describedby="serialPortHelp"
+                    >
+                      <button type="button" class="btn btn-success">
+                        -1
+                      </button>
+                      <button type="button" class="btn btn-success">
+                        0
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        1
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        2
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        3
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        4
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        5
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        6
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        7
+                      </button>
+                    </div>
+                    <small id="serialPortHelp" class="form-text text-muted">
+                      <code><strong>SERIAL_PORT_2</strong></code>
+                      Note: Serial port -1 is the USB emulated serial port, if
+                      available.
+                    </small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Baud Rate</label>
+                    <select
+                      class="form-control custom-select"
+                      id="exampleFormControlSelect1"
+                      aria-describedby="baudRateHelp"
+                    >
+                      <option>2400</option>
+                      <option>9600</option>
+                      <option>19200</option>
+                      <option>38400</option>
+                      <option>57600</option>
+                      <option>115200</option>
+                      <option>250000</option>
+                    </select>
+                    <small id="serialPortHelp" class="form-text text-muted">
+                      <code><strong>BAUDRATE</strong></code> The serial
+                      communication speed of the printer should be as fast as it
+                      can manage without generating errors. In most cases 115200
+                      gives a good balance between speed and stability. Start
+                      with 250000 and only go lower if “line number” and
+                      “checksum” errors start to appear. Note that some boards
+                      (e.g., a temperamental Sanguinololu clone based on the
+                      ATMEGA1284P) may not be able to handle a baudrate over
+                      57600
+                    </small>
+                  </div>
+                  <div class="form-group form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      aria-describedby="custombootscreenHelp"
+                      id="exampleCheck1"
+                    />
+                    <label class="form-check-label" for="exampleCheck1">
+                      Enable Bluetooth
+                    </label>
+                    <small
+                      id="customBootScreenHelp"
+                      class="form-text text-muted"
+                    >
+                      <code><strong>BLUETOOTH</strong> </code>
+                      Enable the Bluetooth serial interface. For boards based on
+                      the AT90USB.
+                    </small>
+                  </div>
+                  <div class="form-group form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      aria-describedby="customStatusScreenHelp"
+                      id="exampleCheck1"
+                    />
+                    <label class="form-check-label" for="exampleCheck1">
+                      Enable Custom Image on Status Screen
+                    </label>
+                    <small
+                      id="customStatusScreenHelp"
+                      class="form-text text-muted"
+                    >
+                      <code><strong>CUSTOM_STATUS_SCREEN_IMAGE</strong> </code>
+                      shows the bitmap in Marlin/_Statusscreen.h on the status
+                      screen.
+                    </small>
+                  </div>
+
+                  <div class="row my-5">
+                    <div class="col-6 text-left">
+                      <button type="button" class="btn btn-primary">
+                        Prev Step
+                      </button>
+                    </div>
+                    <div class="col-6 text-right">
+                      <button type="submit" class="btn btn-success mr-2">
+                        Save
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Next Step
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </ng-container>
+              <ng-container>
                 <h4 class="section-heading">Dimention</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-              </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam.
+                </p>
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter email"
+                    />
+                    <small id="emailHelp" class="form-text text-muted"
+                      >We'll never share your email with anyone else.</small
+                    >
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div class="form-group form-check">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id="exampleCheck1"
+                    />
+                    <label class="form-check-label" for="exampleCheck1"
+                      >Check me out</label
+                    >
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </ng-container>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
