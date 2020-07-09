@@ -28,9 +28,15 @@ export class CreateComponent implements OnInit {
     {
       stepNo: 4,
       icon: '',
-      title: 'Dimention',
-      subTitle: 'Overall Printer Size',
+      title: 'Extruder Info',
+      subTitle: 'Extruder Details Configuration',
     },
+    // {
+    //   stepNo: 4,
+    //   icon: '',
+    //   title: 'Dimention',
+    //   subTitle: 'Overall Printer Size',
+    // },
   ];
   constructor() {}
 

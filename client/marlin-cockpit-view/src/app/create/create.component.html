@@ -30,7 +30,7 @@
           <!-- Page Content -->
           <div id="page-content-wrapper" class="scrollbar">
             <div class="container-fluid my-5">
-              <ng-container>
+              <!-- <ng-container>
                 <h4 class="section-heading">
                   <span class="badge badge-secondary mr-2">Step 1</span
                   >Configure Base Variant
@@ -79,7 +79,7 @@
                   </div>
                 </form>
               </ng-container>
-              <!-- <ng-container>
+              <ng-container>
                 <h4 class="section-heading">
                   <span class="badge badge-secondary mr-2">Step 2</span
                   >Configure Firmware Info
@@ -187,7 +187,7 @@
                     </div>
                   </div>
                 </form>
-              </ng-container> -->
+              </ng-container>
               <ng-container>
                 <h4 class="section-heading">
                   <span class="badge badge-secondary mr-2">Step 3</span
@@ -442,9 +442,438 @@
                     </div>
                   </div>
                 </form>
-              </ng-container>
+              </ng-container> -->
+
               <ng-container>
-                <h4 class="section-heading">Dimention</h4>
+                <h4 class="section-heading">
+                  <span class="badge badge-secondary mr-2">Step 4</span
+                  >Configure Extuder Info
+                </h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam.
+                </p>
+                <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1"
+                      >Number of extruder(s)</label
+                    >
+                    <div
+                      class="btn-group block"
+                      role="group"
+                      aria-label="Serial Port"
+                      aria-describedby="exrderInfoHelp"
+                    >
+                      <button type="button" class="btn btn-success">
+                        1
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        2
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        3
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        4
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        5
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        6
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        7
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        8
+                      </button>
+                    </div>
+                    <small id="exrderInfoHelp" class="form-text text-muted">
+                      <code><strong>EXTRUDERS</strong></code> This value, from 1
+                      to 8, defines how many extruders (or E steppers) the
+                      printer has. By default Marlin will assume separate
+                      nozzles all moving together on a single carriage. If you
+                      have a single nozzle, a switching extruder, a mixing
+                      extruder, or dual X carriages, specify that below.
+                      <br />
+                      Note: This value should be set to the total number of E
+                      stepper motors on the machine, even if there’s only a
+                      single nozzle.
+                    </small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Filament Diameter</label>
+                    <div
+                      class="btn-group block"
+                      role="group"
+                      aria-label="Serial Port"
+                      aria-describedby="filamentHelp"
+                    >
+                      <button type="button" class="btn btn-success">
+                        1.75
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        2.85
+                      </button>
+                      <button type="button" class="btn btn-secondary">
+                        3.00
+                      </button>
+                    </div>
+                    <small id="filamentHelp" class="form-text text-muted">
+                      <code><strong>DEFAULT_NOMINAL_FILAMENT_DIA</strong></code>
+                      This is the “nominal” filament diameter as written on the
+                      filament spool (1.75, 2.85, 3.0). If you typically use
+                      1.75mm filament, but physically measure the diameter as
+                      1.70mm, you should still use 1.75 if that’s what you have
+                      set in your slicer.
+                      <br />
+                      This value is used by Marlin to compensate for Filament
+                      Width when printing in volumetric mode (See
+                      <code>M200</code>), and by the Unified Bed Leveling
+                      command <code>G26</code> when printing a test grid.
+                      <br /><br />
+                      You can override this value with <code>M404 W</code>.
+                    </small>
+                  </div>
+                  <div class="form-group custom-control custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      aria-describedby="singleNozzleHelp"
+                      id="exampleCheck8"
+                    />
+                    <label class="custom-control-label" for="exampleCheck8"
+                      >Enable Single Nozzle</label
+                    >
+                    <small id="singleNozzleHelp" class="form-text text-muted">
+                      <code><strong>SINGLENOZZLE</strong></code>
+                      if you have an E3D Cyclops or any other “multi-extruder”
+                      system that shares a single nozzle. In a single-nozzle
+                      setup, only one filament drive is engaged at a time, and
+                      each needs to retract before the next filament can be
+                      loaded and begin purging and extruding.
+                    </small>
+                  </div>
+                  <div class="form-group custom-control custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      aria-describedby="multiplexerHelp"
+                      id="exampleCheck9"
+                    />
+                    <label class="custom-control-label" for="exampleCheck9"
+                      >Enable MK2 Multiplexer</label
+                    >
+                    <small id="multiplexerHelp" class="form-text text-muted">
+                      <code><strong>MK2_MULTIPLEXER</strong></code>
+                      Allows one stepper driver on a control board to drive two
+                      to eight stepper motors, one at a time.
+                      <br />
+                      <strong
+                        >Prusa MK2 Single Nozzle Multi-Material
+                        Multiplexer</strong
+                      >
+                    </small>
+                  </div>
+                  <small id="singleNozzleHelp" class="form-text text-muted">
+                    Override the default DIO selector pins here, if needed. Some
+                    pins files may provide defaults for these pins.
+                  </small>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto">
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">MUX 0</div>
+                        </div>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="inlineFormInputGroup"
+                          placeholder="Pin Number"
+                          value="40"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto">
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">MUX 1</div>
+                        </div>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="inlineFormInputGroup"
+                          placeholder="Pin Number"
+                          value="42"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="form-check mb-2">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="autoSizingCheck"
+                        />
+                        <label class="form-check-label" for="autoSizingCheck">
+                          Enable MUX 1
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto">
+                      <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">MUX 2</div>
+                        </div>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="inlineFormInputGroup"
+                          placeholder="Pin Number"
+                          value="44"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="form-check mb-2">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="autoSizingCheck"
+                        />
+                        <label class="form-check-label" for="autoSizingCheck">
+                          Enable MUX 2
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group custom-control custom-switch mt-3">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      aria-describedby="prusaMmu2Help"
+                      id="exampleCheck10"
+                    />
+                    <label class="custom-control-label" for="exampleCheck10"
+                      >Enable Prusa MMU2</label
+                    >
+                    <small id="prusaMmu2Help" class="form-text text-muted">
+                      <code><strong>PRUSA_MMU2</strong></code>
+                      Enable support for the Prusa Multi-material unit 2. This
+                      requires a free serial port on your printer board. To use
+                      the MMU2 you also have to
+                      <ul>
+                        <li>enable <code>NOZZLE_PARK_FEATURE</code></li>
+                        <li>set <code>EXTRUDERS</code> = 5</li>
+                      </ul>
+                    </small>
+                  </div>
+
+                  <div class="form-group custom-control custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      aria-describedby="switchingNozzleHelp"
+                      id="exampleCheck11"
+                    />
+                    <label class="custom-control-label" for="exampleCheck11"
+                      >Enable Switching Nozzle</label
+                    >
+                    <small
+                      id="switchingNozzleHelp"
+                      class="form-text text-muted"
+                    >
+                      <code><strong>SWITCHING_NOZZLE</strong></code>
+                      A Switching Extruder is a dual extruder that uses a single
+                      stepper motor to drive two filaments, but only one at a
+                      time. The servo is used to switch the side of the extruder
+                      that will drive the filament. The E motor also reverses
+                      direction for the second filament. Set the servo
+                      sub-settings above according to your particular extruder’s
+                      setup instructions.
+                      <br /><br />
+                      A Switching Nozzle is a carriage with 2 nozzles. A servo
+                      is used to move one of the nozzles up and down. The servo
+                      either lowers the active nozzle or raises the inactive
+                      one. Set the servo sub-settings above according to your
+                      particular extruder’s setup instructions
+                    </small>
+
+                    <!-- @todo switching nozzle settings -->
+                  </div>
+
+                  <div class="form-group custom-control custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      aria-describedby="parkingExtruderSolenoidHelp"
+                      id="exampleCheck12"
+                    />
+                    <label class="custom-control-label" for="exampleCheck12"
+                      >Enable Parking Extruder with Solenoid</label
+                    >
+                    <small
+                      id="parkingExtruderSolenoidHelp"
+                      class="form-text text-muted"
+                    >
+                      <code><strong>PARKING_EXTRUDER</strong></code>
+                      Two separate X-carriages with extruders that connect to a
+                      moving part via a solenoid docking mechanism. Requires
+                      SOL1_PIN and SOL2_PIN.
+                    </small>
+                  </div>
+
+                  <div class="form-group custom-control custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      aria-describedby="parkingExtruderMagnetHelp"
+                      id="exampleCheck13"
+                    />
+                    <label class="custom-control-label" for="exampleCheck13"
+                      >Enable Parking Extruder with Magnet</label
+                    >
+                    <small
+                      id="parkingExtruderMagnetHelp"
+                      class="form-text text-muted"
+                    >
+                      <code><strong>MAGNETIC_PARKING_EXTRUDER</strong></code>
+                      Two separate X-carriages with extruders that connect to a
+                      moving part via a magnetic docking mechanism using
+                      movements and no solenoid
+                    </small>
+
+                    <!-- @todo parking extruder settings -->
+                  </div>
+
+                  <div class="form-group custom-control custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      aria-describedby="switchingToolheadHelp"
+                      id="exampleCheck14"
+                    />
+                    <label class="custom-control-label" for="exampleCheck14"
+                      >Enable Switching Tool Head</label
+                    >
+                    <small
+                      id="switchingToolheadHelp"
+                      class="form-text text-muted"
+                    >
+                      <code><strong>SWITCHING_TOOLHEAD</strong></code>
+                      Support for swappable and dockable toolheads, such as the
+                      E3D Tool Changer. Toolheads are locked with a servo.
+                    </small>
+                  </div>
+
+                  <div class="form-group custom-control custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      aria-describedby="magneticSwitchingToolheadHelp"
+                      id="exampleCheck15"
+                    />
+                    <label class="custom-control-label" for="exampleCheck15"
+                      >Enable Magnetic Switching Tool Head</label
+                    >
+                    <small
+                      id="magneticSwitchingToolheadHelp"
+                      class="form-text text-muted"
+                    >
+                      <code><strong>MAGNETIC_SWITCHING_TOOLHEAD</strong></code>
+                      Support swappable and dockable toolheads with a magnetic
+                      docking mechanism using movement and no servo.
+                    </small>
+                  </div>
+
+                  <div class="form-group custom-control custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      aria-describedby="electroMagneticSwitchingToolheadHelp"
+                      id="exampleCheck16"
+                    />
+                    <label class="custom-control-label" for="exampleCheck16"
+                      >Enable Electromagnetic Switching Tool Head</label
+                    >
+                    <small
+                      id="electroMagneticSwitchingToolheadHelp"
+                      class="form-text text-muted"
+                    >
+                      <code
+                        ><strong
+                          >ELECTROMAGNETIC_SWITCHING_TOOLHEAD</strong
+                        ></code
+                      >
+                      For CoreXY / HBot kinematics, toolheads are parked at one
+                      edge and held with an electromagnet. Supports more than 2
+                      Toolheads. See
+                      <a href="https://youtu.be/JolbsAKTKf4" target="blank"
+                        >https://youtu.be/JolbsAKTKf4</a
+                      >
+                    </small>
+
+                    <!-- @todo switching tool head settings -->
+                  </div>
+
+                  <div class="form-group custom-control custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      aria-describedby="mixingExtruderHelp"
+                      id="exampleCheck16"
+                    />
+                    <label class="custom-control-label" for="exampleCheck16"
+                      >Enable Mixing Extruder</label
+                    >
+                    <small id="mixingExtruderHelp" class="form-text text-muted">
+                      <code><strong>MIXING_EXTRUDER</strong></code>
+                      A Mixing Extruder uses two or more stepper motors to drive
+                      multiple filaments into a mixing chamber, with the mixed
+                      filaments extruded from a single nozzle. This option adds
+                      the ability to set a mixture, to save mixtures, and to
+                      recall mixtures using the <code>T</code> command. The
+                      extruder still uses a single E axis, while the current
+                      mixture is used to determine the proportion of each
+                      filament to use. An “experimental” <code>G1</code> direct
+                      mixing option is included.
+                    </small>
+
+                    <!-- @todo mixing extruder settings -->
+                  </div>
+
+                  <!-- @todo hotend offset -->
+
+                  <div class="row my-5">
+                    <div class="col-6 text-left">
+                      <button type="button" class="btn btn-primary">
+                        Prev Step
+                      </button>
+                    </div>
+                    <div class="col-6 text-right">
+                      <button type="submit" class="btn btn-success mr-2">
+                        Save
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Next Step
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </ng-container>
+
+              <ng-container>
+                <h4 class="section-heading">
+                  <span class="badge badge-secondary mr-2">Step 5</span
+                  >Dimention
+                </h4>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
