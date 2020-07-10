@@ -7,6 +7,14 @@
   Online Marlin Configuration Generator
 </p>
 
+<p align="center">
+    <img src="https://img.shields.io/badge/Completion-30%25-informational" alt="Completion-30"/>
+    <img src="https://img.shields.io/badge/Angular-9.1.9-red?logo=angular" alt="angular-9.1.9" />
+    <img src="https://img.shields.io/badge/Bootstrap-4.4.0-blueviolet?logo=bootstrap" alt="bootstrap-4.4.0" />
+    <img src="https://img.shields.io/badge/NodeJS-13.5.0-green?logo=node.js" alt="nodejs-15.5.0" />
+    <img src="https://img.shields.io/badge/MongoDB-4.2.8-brightgreen?logo=mongodb" alt="mongodb-4.2.8" />
+</p>
+
 ## Marlin Cockpit v1 (Work in Progress)
 Build with Angular, Bootstrap, NodeJS & MongoDB
 
