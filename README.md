@@ -1,6 +1,6 @@
 
 <p align="center">
-    ![Preview1](./img/preview.png)
+    ![Preview1](./img/logo.png)
 </p>
 <h3 align="center">Marlin Cockpit</h3>
 <p align="center">
@@ -22,6 +22,6 @@ Marlin Cockpit is a online web configuration generator, user who are new to marl
 
 Will help to increase the marlin user base cutting off the complexity for basic users.
 
-![Preview1](./img/preview.png)
+![Preview2](./img/preview.png)
 
 Interested to help? Send a mail to aaniruddhaaa@gmail.com. 
