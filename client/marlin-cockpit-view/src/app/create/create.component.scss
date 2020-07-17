@@ -38,11 +38,15 @@ $default-tab-width: 20px; // Default Tab Indent Spacing Width
             color: white;
             cursor: pointer;
             .icon {
-              font-size: 35px;
-              height: 35px;
-              width: 35px;
-              line-height: 35px;
-              margin-bottom: 13px;
+              font-size: 38px;
+              height: 38px;
+              width: 38px;
+              line-height: 38px;
+              margin-bottom: 10px;
+              img {
+                height: 38px;
+                width: 38px;
+              }
             }
 
             .title {

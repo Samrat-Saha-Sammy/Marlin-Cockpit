@@ -9,8 +9,8 @@
               <li *ngFor="let step of stepList">
                 <a (click)="scrollToElem(step.id)">
                   <div class="title-wrapper">
-                    <div class="icon">
-                      <i class="mdi mdi-account-multiple-outline"></i>
+                    <div class="icon mx-auto">
+                      <img src="../assets/{{ step.icon }}" alt="step.title" />
                     </div>
                     <h6 class="title">
                       <span class="badge badge-secondary mr-2">{{
@@ -71,14 +71,14 @@
                       <option>020005</option>
                     </select>
                   </div>
-                  <div class="text-right my-5">
+                  <!-- <div class="text-right my-5">
                     <button type="submit" class="btn btn-success mr-2">
                       Save
                     </button>
                     <button type="button" class="btn btn-primary">
                       Next Step
                     </button>
-                  </div>
+                  </div> -->
                 </form>
               </ng-container>
               <ng-container>
@@ -179,7 +179,7 @@
                     </small>
                   </div>
 
-                  <div class="row my-5">
+                  <!-- <div class="row my-5">
                     <div class="col-6 text-left">
                       <button type="button" class="btn btn-primary">
                         Prev Step
@@ -193,7 +193,7 @@
                         Next Step
                       </button>
                     </div>
-                  </div>
+                  </div> -->
                 </form>
               </ng-container>
               <ng-container>
@@ -439,7 +439,7 @@
                     </small>
                   </div>
 
-                  <div class="row my-5">
+                  <!-- <div class="row my-5">
                     <div class="col-6 text-left">
                       <button type="button" class="btn btn-primary">
                         Prev Step
@@ -453,7 +453,7 @@
                         Next Step
                       </button>
                     </div>
-                  </div>
+                  </div> -->
                 </form>
               </ng-container>
 
@@ -896,7 +896,7 @@
 
                   <!-- @todo hotend offset -->
 
-                  <div class="row my-5">
+                  <!-- <div class="row my-5">
                     <div class="col-6 text-left">
                       <button type="button" class="btn btn-primary">
                         Prev Step
@@ -910,7 +910,7 @@
                         Next Step
                       </button>
                     </div>
-                  </div>
+                  </div> -->
                 </form>
               </ng-container>
 
@@ -1131,7 +1131,7 @@
                     </small>
                   </div>
 
-                  <div class="row my-5">
+                  <!-- <div class="row my-5">
                     <div class="col-6 text-left">
                       <button type="button" class="btn btn-primary">
                         Prev Step
@@ -1145,7 +1145,7 @@
                         Next Step
                       </button>
                     </div>
-                  </div>
+                  </div> -->
                 </form>
               </ng-container>
 
@@ -1192,7 +1192,12 @@
                       >Check me out</label
                     >
                   </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  
+                  <div class="text-right">
+                    <button type="submit" class="btn btn-success mr-2">
+                      Finish & Download
+                    </button>
+                  </div>
                 </form>
               </ng-container>
             </div>
