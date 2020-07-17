@@ -1,4 +1,10 @@
 $blue-color: #001778;
+$default-tab-width: 20px; // Default Tab Indent Spacing Width
+
+// Tab Indent Mixin
+@mixin tab-indent($indent) {
+  margin-left: $indent * $default-tab-width;
+}
 
 #wrapper {
   height: 100vh;
@@ -30,6 +36,7 @@ $blue-color: #001778;
           }
           .title-wrapper {
             color: white;
+            cursor: pointer;
             .icon {
               font-size: 35px;
               height: 35px;
@@ -71,6 +78,19 @@ $blue-color: #001778;
         font-weight: bold;
         color: #030303;
         margin-bottom: 15px;
+      }
+      form {
+        div {
+          &.tab-2 {
+            @include tab-indent(2);
+          }
+          &.tab-4 {
+            @include tab-indent(4);
+          }
+          &.tab-6 {
+            @include tab-indent(6);
+          }
+        }
       }
       p {
         font-size: 15px;

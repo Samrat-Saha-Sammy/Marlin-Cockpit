@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-create',
@@ -8,37 +8,63 @@ import { Component, OnInit } from '@angular/core';
 export class CreateComponent implements OnInit {
   public stepList = [
     {
-      stepNo: 1,
+      no: 1,
+      id: 'base_variant',
       icon: '',
       title: 'Base Variant',
       subTitle: 'Marlin Version Configuration',
     },
     {
-      stepNo: 2,
+      no: 2,
+      id: 'firmware_info',
       icon: '',
       title: 'Firmware Info',
       subTitle: 'Boot Screen Configuration',
     },
     {
-      stepNo: 3,
+      no: 3,
+      id: 'hardware_info',
       icon: '',
       title: 'Hardware Info',
       subTitle: 'Hardware Details Configuration',
     },
     {
-      stepNo: 4,
+      no: 4,
+      id: 'extruder_info',
       icon: '',
       title: 'Extruder Info',
       subTitle: 'Extruder Details Configuration',
     },
+    {
+      no: 5,
+      id: 'psu_info',
+      icon: '',
+      title: 'PSU Info',
+      subTitle: 'PSU Configuration',
+    },
     // {
-    //   stepNo: 4,
+    //   no: 4,
     //   icon: '',
     //   title: 'Dimention',
     //   subTitle: 'Overall Printer Size',
     // },
   ];
+
+  @ViewChild('base_variant') base_variant: ElementRef;
+  @ViewChild('firmware_info') firmware_info: ElementRef;
+  @ViewChild('hardware_info') hardware_info: ElementRef;
+  @ViewChild('extruder_info') extruder_info: ElementRef;
+  @ViewChild('psu_info') psu_info: ElementRef;
   constructor() {}
 
   ngOnInit(): void {}
+
+  /**
+   * Method to scroll to target element in DOM
+   * @param toElem elementRef
+   * @returns void
+   */
+  public scrollToElem(toElem: number): void {
+    this[toElem].nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
 }
