@@ -117,7 +117,13 @@
                       firmware. Use this setting as a way to uniquely identify
                       all your custom configurations. The startup message is
                       printed when connecting to host software, when the board
-                      reboots and M115.
+                      reboots and
+                      <a
+                        rel="external noopener noreferrer"
+                        target="_blank"
+                        href="https://marlinfw.org/docs/gcode/M115.html"
+                        ><code>M115</code></a
+                      >.
                     </small>
                   </div>
                   <div class="form-group custom-control custom-switch">
@@ -135,7 +141,7 @@
                       boot screen for LCD controllers.
                     </small>
                   </div>
-                  <div class="form-group custom-control custom-switch">
+                  <div class="form-group custom-control custom-switch tab-2">
                     <input
                       type="checkbox"
                       class="custom-control-input"
@@ -153,7 +159,7 @@
                       shows the bitmap in Marlin/_Bootscreen.h on startup.
                     </small>
                   </div>
-                  <div class="form-group custom-control custom-switch">
+                  <div class="form-group custom-control custom-switch tab-2">
                     <input
                       type="checkbox"
                       class="custom-control-input"
@@ -262,7 +268,7 @@
                       your board has a secondary serial port.
                     </small>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group tab-2">
                     <label for="exampleInputEmail1">Serial Port 2</label>
                     <div
                       class="btn-group block"
@@ -380,7 +386,7 @@
                       >Enable Custom Machine Name</label
                     >
                   </div>
-                  <div class="form-group">
+                  <div class="form-group tab-2">
                     <label for="exampleInputEmail1">Custom Machine Name</label>
                     <input
                       type="text"
@@ -393,8 +399,13 @@
                     <small id="customMachineHelp" class="form-text text-muted">
                       <code><strong>CUSTOM_MACHINE_NAME</strong></code> This is
                       the name of your printer as displayed on the LCD and by
-                      M115. For example, if you set this to “My Delta” the LCD
-                      will display “My Delta ready” when the printer starts up.
+                      <a
+                        rel="external noopener noreferrer"
+                        target="_blank"
+                        href="https://marlinfw.org/docs/gcode/M115.html"
+                        ><code>M115</code> </a
+                      >. For example, if you set this to “My Delta” the LCD will
+                      display “My Delta ready” when the printer starts up.
                     </small>
                   </div>
 
@@ -409,7 +420,7 @@
                       >Enable Custom Machine UUID</label
                     >
                   </div>
-                  <div class="form-group">
+                  <div class="form-group tab-2">
                     <label for="exampleInputEmail1">Custom Machine UUID</label>
                     <input
                       type="text"
@@ -533,10 +544,26 @@
                       <br />
                       This value is used by Marlin to compensate for Filament
                       Width when printing in volumetric mode (See
-                      <code>M200</code>), and by the Unified Bed Leveling
-                      command <code>G26</code> when printing a test grid.
-                      <br /><br />
-                      You can override this value with <code>M404 W</code>.
+                      <a
+                        rel="external noopener noreferrer"
+                        target="_blank"
+                        href="https://marlinfw.org/docs/gcode/M200.html"
+                        ><code>M200</code></a
+                      >), and by the Unified Bed Leveling command
+                      <a
+                        rel="external noopener noreferrer"
+                        target="_blank"
+                        href="https://marlinfw.org/docs/gcode/M026.html"
+                        ><code>G26</code></a
+                      >
+                      when printing a test grid. <br /><br />
+                      You can override this value with
+                      <a
+                        rel="external noopener noreferrer"
+                        target="_blank"
+                        href="https://marlinfw.org/docs/gcode/M404.html"
+                        ><code>M404</code></a
+                      >.
                     </small>
                   </div>
                   <div class="form-group custom-control custom-switch">
@@ -579,11 +606,15 @@
                       >
                     </small>
                   </div>
-                  <small id="singleNozzleHelp" class="form-text text-muted">
-                    Override the default DIO selector pins here, if needed. Some
-                    pins files may provide defaults for these pins.
-                  </small>
-                  <div class="form-row align-items-center">
+
+                  <div class="form-row align-items-center tab-2">
+                    <small
+                      id="singleNozzleHelp"
+                      class="form-text text-muted tab-2"
+                    >
+                      Override the default DIO selector pins here, if needed.
+                      Some pins files may provide defaults for these pins.
+                    </small>
                     <div class="col-auto">
                       <div class="input-group mb-2">
                         <div class="input-group-prepend">
@@ -599,7 +630,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="form-row align-items-center">
+                  <div class="form-row align-items-center tab-2">
                     <div class="col-auto">
                       <div class="input-group mb-2">
                         <div class="input-group-prepend">
@@ -627,7 +658,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="form-row align-items-center">
+                  <div class="form-row align-items-center tab-2">
                     <div class="col-auto">
                       <div class="input-group mb-2">
                         <div class="input-group-prepend">
@@ -841,11 +872,23 @@
                       multiple filaments into a mixing chamber, with the mixed
                       filaments extruded from a single nozzle. This option adds
                       the ability to set a mixture, to save mixtures, and to
-                      recall mixtures using the <code>T</code> command. The
-                      extruder still uses a single E axis, while the current
-                      mixture is used to determine the proportion of each
-                      filament to use. An “experimental” <code>G1</code> direct
-                      mixing option is included.
+                      recall mixtures using the
+                      <a
+                        rel="external noopener noreferrer"
+                        target="_blank"
+                        href="https://marlinfw.org/docs/gcode/T001-T002.html"
+                        ><code>T</code></a
+                      >
+                      command. The extruder still uses a single E axis, while
+                      the current mixture is used to determine the proportion of
+                      each filament to use. An “experimental”
+                      <a
+                        rel="external noopener noreferrer"
+                        target="_blank"
+                        href="https://marlinfw.org/docs/gcode/G000-G001.html"
+                        ><code>G1</code></a
+                      >
+                      direct mixing option is included.
                     </small>
 
                     <!-- @todo mixing extruder settings -->
