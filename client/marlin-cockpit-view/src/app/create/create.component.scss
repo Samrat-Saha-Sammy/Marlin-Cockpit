@@ -106,3 +106,27 @@ $default-tab-width: 20px; // Default Tab Indent Spacing Width
 .btn-group.block {
   display: block !important;
 }
+
+input[type=range]::-ms-track {
+  background: rgb(48,223,37);
+  background: linear-gradient(90deg, rgba(48,223,37,0.9934348739495799) 0%, rgba(243,246,23,1) 50%, rgba(252,69,69,1) 100%);
+}
+input[type=range]::-moz-range-track {
+  background: rgb(48,223,37);
+  background: linear-gradient(90deg, rgba(48,223,37,0.9934348739495799) 0%, rgba(243,246,23,1) 50%, rgba(252,69,69,1) 100%);
+}
+input[type=range]::-webkit-slider-runnable-track
+{
+  background: rgb(48,223,37);
+  background: linear-gradient(90deg, rgba(48,223,37,0.9934348739495799) 0%, rgba(243,246,23,1) 50%, rgba(252,69,69,1) 100%);
+}
+
+.custom-range::-ms-thumb {
+  background: gray;
+}
+.custom-range::-moz-range-thumb {
+  background: gray;
+}
+.custom-range::-webkit-slider-thumb {
+  background: gray;
+}

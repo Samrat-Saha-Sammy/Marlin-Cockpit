@@ -1045,9 +1045,11 @@
                     <label for="exampleInputText1"
                       >Auto Power E Fans Temperature</label
                     >
-                    <div class="input-group mb-2 mr-sm-2">
+                    <input type="range" min="10" max="100" value="50" step="1" class="form-control-range custom-range" id="formControlRange">
+
+                    <div class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">°C</div>
+                        <div class="input-group-text bg-success text-white">10°C</div>
                       </div>
                       <input
                         type="text"
@@ -1056,7 +1058,11 @@
                         aria-describedby="autoPowerTempHelp"
                         placeholder="Temperature"
                         value="50"
+                        readonly
                       />
+                      <div class="input-group-append">
+                        <span class="input-group-text bg-danger text-white" >100°C</span>
+                      </div>
                     </div>
 
                     <small id="autoPowerTempHelp" class="form-text text-muted">
@@ -1071,6 +1077,7 @@
                       class="custom-control-input"
                       aria-describedby="autoPowerEFanHelp"
                       id="exampleCheck24"
+
                     />
                     <label class="custom-control-label" for="exampleCheck24"
                       >Enable Auto Power Controller Fans</label
@@ -1099,9 +1106,11 @@
                     <label for="exampleInputText2"
                       >Auto Power Chamber Fans Temperature</label
                     >
-                    <div class="input-group mb-2 mr-sm-2">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">°C</div>
+                    <input type="range" min="10" max="100" value="30" step="1" class="form-control-range custom-range" id="formControlRange">
+
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend ">
+                        <div class="input-group-text bg-success text-white">10°C</div>
                       </div>
                       <input
                         type="text"
@@ -1109,7 +1118,11 @@
                         id="exampleInputText2"
                         placeholder="Temperature"
                         value="30"
+                        readonly
                       />
+                      <div class="input-group-append">
+                        <span class="input-group-text bg-danger text-white" >100°C</span>
+                      </div>
                     </div>
 
                     <small id="psuControlHelp" class="form-text text-muted">
