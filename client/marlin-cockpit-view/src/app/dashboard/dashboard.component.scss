@@ -16,15 +16,17 @@ $heading-font: 'Montserrat Subrayada', sans-serif;
   $button-bg-color: #3bb3e0;
   $button-color: #2ab7ec;
   $button-shade-a: #156785;
+  $button-shadow: #39255e;
 
   $button-color-rgb: rgb(44, 160, 202);
 
   .engine-button {
     outline: none;
     border: 0px;
+    width: calc(100% - 35px);
     background-color: $button-bg-color;
     //font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
+    font-size: 18px;
     text-decoration: none;
     color: #fff;
     position: relative;
@@ -70,13 +72,13 @@ $heading-font: 'Montserrat Subrayada', sans-serif;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     -webkit-box-shadow: inset 0px 1px 0px $button-color,
-      0px 5px 0px 0px $button-shade-a, 0px 10px 5px #001467;
+      0px 5px 0px 0px $button-shade-a, 0px 10px 5px $button-shadow;
     -moz-box-shadow: inset 0px 1px 0px $button-color,
-      0px 5px 0px 0px $button-shade-a, 0px 10px 5px #001467;
+      0px 5px 0px 0px $button-shade-a, 0px 10px 5px $button-shadow;
     -o-box-shadow: inset 0px 1px 0px $button-color,
-      0px 5px 0px 0px $button-shade-a, 0px 10px 5px #001467;
+      0px 5px 0px 0px $button-shade-a, 0px 10px 5px $button-shadow;
     box-shadow: inset 0px 1px 0px $button-color, 0px 5px 0px 0px $button-shade-a,
-      0px 10px 5px #001467;
+      0px 10px 5px $button-shadow;
   }
 
   .engine-button:active {
@@ -115,20 +117,20 @@ $heading-font: 'Montserrat Subrayada', sans-serif;
       color-stop(1, rgb(44, 160, 202))
     );
     -webkit-box-shadow: inset 0px 1px 0px $button-color,
-      0px 2px 0px 0px $button-shade-a, 0px 5px 3px #001467;
+      0px 2px 0px 0px $button-shade-a, 0px 5px 3px $button-shadow;
     -moz-box-shadow: inset 0px 1px 0px $button-color,
-      0px 2px 0px 0px $button-shade-a, 0px 5px 3px #001467;
+      0px 2px 0px 0px $button-shade-a, 0px 5px 3px $button-shadow;
     -o-box-shadow: inset 0px 1px 0px $button-color,
-      0px 2px 0px 0px $button-shade-a, 0px 5px 3px #001467;
+      0px 2px 0px 0px $button-shade-a, 0px 5px 3px $button-shadow;
     box-shadow: inset 0px 1px 0px $button-color, 0px 2px 0px 0px $button-shade-a,
-      0px 5px 3px #001467;
+      0px 5px 3px $button-shadow;
   }
 
   .engine-button::before {
     background-color: #2561b4;
     content: '1';
     width: 35px;
-    max-height: 38px;
+    max-height: 47px;
     height: 100%;
     position: absolute;
     display: block;
@@ -179,28 +181,28 @@ $heading-font: 'Montserrat Subrayada', sans-serif;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     -webkit-box-shadow: inset 0px 1px 0px $button-color, 0px 5px 0px 0px #032b3a,
-      0px 10px 5px #001467;
+      0px 10px 5px $button-shadow;
     -moz-box-shadow: inset 0px 1px 0px $button-color, 0px 5px 0px 0px #032b3a,
-      0px 10px 5px #001467;
+      0px 10px 5px $button-shadow;
     -o-box-shadow: inset 0px 1px 0px $button-color, 0px 5px 0px 0px #032b3a,
-      0px 10px 5px #001467;
+      0px 10px 5px $button-shadow;
     box-shadow: inset 0px 1px 0px $button-color, 0px 5px 0px 0px #032b3a,
-      0px 10px 5px #001467;
+      0px 10px 5px $button-shadow;
   }
 
   .engine-button:active::before {
     top: -3px;
     -webkit-box-shadow: inset 0px 1px 0px $button-color, 0px 5px 0px 0px #032b3a,
       1px 1px 0px 0px #044a64, 2px 2px 0px 0px #044a64, 2px 5px 0px 0px #044a64,
-      6px 4px 2px #0b698b, 0px 10px 5px #001467;
+      6px 4px 2px #0b698b, 0px 10px 5px $button-shadow;
     -moz-box-shadow: inset 0px 1px 0px $button-color, 0px 5px 0px 0px #032b3a,
       1px 1px 0px 0px #044a64, 2px 2px 0px 0px #044a64, 2px 5px 0px 0px #044a64,
-      6px 4px 2px #0b698b, 0px 10px 5px #001467;
+      6px 4px 2px #0b698b, 0px 10px 5px $button-shadow;
     -o-box-shadow: inset 0px 1px 0px $button-color, 0px 5px 0px 0px #032b3a,
       1px 1px 0px 0px #044a64, 2px 2px 0px 0px #044a64, 2px 5px 0px 0px #044a64,
-      6px 4px 2px #0b698b, 0px 10px 5px #001467;
+      6px 4px 2px #0b698b, 0px 10px 5px $button-shadow;
     box-shadow: inset 0px 1px 0px $button-color, 0px 5px 0px 0px #032b3a,
       1px 1px 0px 0px #044a64, 2px 2px 0px 0px #044a64, 2px 5px 0px 0px #044a64,
-      6px 4px 2px #0b698b, 0px 10px 5px #001467;
+      6px 4px 2px #0b698b, 0px 10px 5px $button-shadow;
   }
 }
