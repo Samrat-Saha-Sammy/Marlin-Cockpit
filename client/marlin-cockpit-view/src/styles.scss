@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-$bg-color: #f2f3f8;
+@import './base';
 
 $body-bg: $bg-color;
 @import 'node_modules/bootstrap/scss/bootstrap';
