@@ -1,1 +1,38 @@
-<p>dashboard works!</p>
+<div class="container dashboard">
+  <h1>Marlin Cockpit</h1>
+
+  <div class="row">
+    <div class="col-9">
+      <h1 class="main-title mt-5"><span>Welcome</span> <br />on board!</h1>
+    </div>
+    <div class="col-3">
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1"
+            >Select Marlin Configuration Version</label
+          >
+          <select class="custom-select" id="exampleFormControlSelect1">
+            <option>020006</option>
+            <option>020005</option>
+          </select>
+        </div>
+
+        <span>OR</span>
+
+        <div class="form-group">
+          <label for="exampleFormControlInput1"
+            >Add Cockpit Configuration Version</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder=""
+          />
+        </div>
+
+        <button type="button" class="engine-button">START ENGINE</button>
+      </form>
+    </div>
+  </div>
+</div>
