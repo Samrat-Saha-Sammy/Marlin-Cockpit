@@ -1252,5 +1252,142 @@ const boards = {
   ],
 };
 
+const temperature_sensor = {
+  "020006": [
+    { id: -5, desc: "PT100 / PT1000 with MAX31865 (only for sensors 0-1)" },
+    { id: -3, desc: "thermocouple with MAX31855 (only for sensors 0-1)" },
+    { id: -2, desc: "thermocouple with MAX6675 (only for sensors 0-1)" },
+    { id: -4, desc: "thermocouple with AD8495" },
+    { id: -1, desc: "thermocouple with AD595" },
+    { id: 0, desc: "not used" },
+    {
+      id: 1,
+      desc: "100k thermistor - best choice for EPCOS 100k (4.7k pullup)F",
+    },
+    { id: 331, desc: "(3.3V scaled thermistor 1 table for MEGA)" },
+    { id: 332, desc: "(3.3V scaled thermistor 1 table for DUE)" },
+    { id: 2, desc: "200k thermistor - ATC Semitec 204GT-2 (4.7k pullup)" },
+    { id: 202, desc: "200k thermistor - Copymaster 3D" },
+    { id: 3, desc: "Mendel-parts thermistor (4.7k pullup)" },
+    {
+      id: 4,
+      desc:
+        "10k thermistor !! do not use it for a hotend. It gives bad resolution at high temp. !!",
+    },
+    {
+      id: 5,
+      desc:
+        "100K thermistor - ATC Semitec 104GT-2/104NT-4-R025H42G (Used in ParCan, J-Head, and E3D) (4.7k pullup)",
+    },
+    { id: 501, desc: "100K Zonestar (Tronxy X3A) Thermistor" },
+    {
+      id: 502,
+      desc: "100K Zonestar Thermistor used by hot bed in Zonestar Prusa P802M",
+    },
+    { id: 512, desc: "100k RPW-Ultra hotend thermistor (4.7k pullup)" },
+    {
+      id: 6,
+      desc:
+        "100k EPCOS - Not as accurate as table 1 (created using a fluke thermocouple) (4.7k pullup)",
+    },
+    { id: 7, desc: "100k Honeywell thermistor 135-104LAG-J01 (4.7k pullup)" },
+    { id: 71, desc: "100k Honeywell thermistor 135-104LAF-J01 (4.7k pullup)" },
+    { id: 8, desc: "100k 0603 SMD Vishay NTCS0603E3104FXT (4.7k pullup)" },
+    { id: 9, desc: "100k GE Sensing AL03006-58.2K-97-G1 (4.7k pullup)" },
+    { id: 10, desc: "100k RS thermistor 198-961 (4.7k pullup)" },
+    {
+      id: 11,
+      desc:
+        "100k beta 3950 1% thermistor (Used in Keenovo AC silicone mats and most Wanhao i3 machines) (4.7k pullup)",
+    },
+    {
+      id: 12,
+      desc:
+        "100k 0603 SMD Vishay NTCS0603E3104FXT (4.7k pullup) (calibrated for Makibox hot bed)",
+    },
+    {
+      id: 13,
+      desc:
+        "100k Hisens 3950  1% up to 300°C for hotend 'Simple ONE' & 'Hotend' 'All In ONE'",
+    },
+    { id: 15, desc: "100k thermistor calibration for JGAurora A5 hotend" },
+    {
+      id: 18,
+      desc: "ATC Semitec 204GT-2 (4.7k pullup) Dagoma.Fr - MKS_Base_DKU001327",
+    },
+    {
+      id: 20,
+      desc:
+        "Pt100 with circuit in the Ultimainboard V2.x with 5v excitation (AVR)",
+    },
+    {
+      id: 21,
+      desc:
+        "Pt100 with circuit in the Ultimainboard V2.x with 3.3v excitation (STM32 \\ LPC176x....)",
+    },
+    {
+      id: 22,
+      desc:
+        "100k (hotend) with 4.7k pullup to 3.3V and 220R to analog input (as in GTM32 Pro vB)",
+    },
+    {
+      id: 23,
+      desc:
+        "100k (bed) with 4.7k pullup to 3.3v and 220R to analog input (as in GTM32 Pro vB)",
+    },
+    {
+      id: 201,
+      desc: "Pt100 with circuit in Overlord, similar to Ultimainboard V2.x",
+    },
+    { id: 60, desc: "100k Maker's Tool Works Kapton Bed Thermistor beta=3950" },
+    {
+      id: 61,
+      desc: "100k Formbot / Vivedino 3950 350C thermistor 4.7k pullup",
+    },
+    { id: 66, desc: "4.7M High Temperature thermistor from Dyze Design" },
+    { id: 67, desc: "450C thermistor from SliceEngineering" },
+    { id: 70, desc: "the 100K thermistor found in the bq Hephestos 2" },
+    {
+      id: 75,
+      desc:
+        "100k Generic Silicon Heat Pad with NTC 100K MGB18-104F39050L32 thermistor",
+    },
+    {
+      id: 99,
+      desc:
+        "100k thermistor with a 10K pull-up resistor (found on some Wanhao i3 machines) 1k ohm pullup tables - This is atypical, and requires changing out the 4.7k pullup for 1k. (but gives greater accuracy and more stable PID)",
+    },
+    { id: 51, desc: "100k thermistor - EPCOS (1k pullup)" },
+    { id: 52, desc: "200k thermistor - ATC Semitec 204GT-2 (1k pullup)" },
+    {
+      id: 55,
+      desc:
+        "100k thermistor - ATC Semitec 104GT-2 (Used in ParCan & J-Head) (1k pullup)",
+    },
+    { id: 1047, desc: "Pt1000 with 4k7 pullup (E3D)" },
+    { id: 1010, desc: "Pt1000 with 1k pullup (non standard)" },
+    { id: 147, desc: "Pt100 with 4k7 pullup" },
+    { id: 110, desc: "Pt100 with 1k pullup (non standard)" },
+    {
+      id: 1000,
+      desc:
+        "Custom - Specify parameters in Configuration_adv.h Use these for Testing or Development purposes. NEVER for production machine.",
+    },
+    {
+      id: 998,
+      desc:
+        "Dummy Table that ALWAYS reads 25°C or the temperature defined below.",
+    },
+    {
+      id: 999,
+      desc:
+        "Dummy Table that ALWAYS reads 100°C or the temperature defined below.",
+    },
+  ],
+};
+
 // Default exports
-module.exports = boards;
+module.exports = {
+  boards: boards,
+  thermal_sensors: temperature_sensor,
+};

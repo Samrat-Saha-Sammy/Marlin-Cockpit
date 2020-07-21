@@ -1045,11 +1045,21 @@
                     <label for="exampleInputText1"
                       >Auto Power E Fans Temperature</label
                     >
-                    <input type="range" min="10" max="100" value="50" step="1" class="form-control-range custom-range" id="formControlRange">
+                    <input
+                      type="range"
+                      min="10"
+                      max="100"
+                      value="50"
+                      step="1"
+                      class="form-control-range custom-range"
+                      id="formControlRange"
+                    />
 
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <div class="input-group-text bg-success text-white">10°C</div>
+                        <div class="input-group-text bg-success text-white">
+                          10°C
+                        </div>
                       </div>
                       <input
                         type="text"
@@ -1061,7 +1071,9 @@
                         readonly
                       />
                       <div class="input-group-append">
-                        <span class="input-group-text bg-danger text-white" >100°C</span>
+                        <span class="input-group-text bg-danger text-white"
+                          >100°C</span
+                        >
                       </div>
                     </div>
 
@@ -1077,7 +1089,6 @@
                       class="custom-control-input"
                       aria-describedby="autoPowerEFanHelp"
                       id="exampleCheck24"
-
                     />
                     <label class="custom-control-label" for="exampleCheck24"
                       >Enable Auto Power Controller Fans</label
@@ -1097,7 +1108,10 @@
                     <label class="custom-control-label" for="exampleCheck25"
                       >Enable Auto Power Chamber Fans</label
                     >
-                    <small id="autoPowerChamberFanHelp" class="form-text text-muted">
+                    <small
+                      id="autoPowerChamberFanHelp"
+                      class="form-text text-muted"
+                    >
                       <code><strong>AUTO_POWER_E_FANS</strong></code>
                     </small>
                   </div>
@@ -1106,11 +1120,21 @@
                     <label for="exampleInputText2"
                       >Auto Power Chamber Fans Temperature</label
                     >
-                    <input type="range" min="10" max="100" value="30" step="1" class="form-control-range custom-range" id="formControlRange">
+                    <input
+                      type="range"
+                      min="10"
+                      max="100"
+                      value="30"
+                      step="1"
+                      class="form-control-range custom-range"
+                      id="formControlRange"
+                    />
 
                     <div class="input-group mb-2">
-                      <div class="input-group-prepend ">
-                        <div class="input-group-text bg-success text-white">10°C</div>
+                      <div class="input-group-prepend">
+                        <div class="input-group-text bg-success text-white">
+                          10°C
+                        </div>
                       </div>
                       <input
                         type="text"
@@ -1121,13 +1145,506 @@
                         readonly
                       />
                       <div class="input-group-append">
-                        <span class="input-group-text bg-danger text-white" >100°C</span>
+                        <span class="input-group-text bg-danger text-white"
+                          >100°C</span
+                        >
                       </div>
                     </div>
 
                     <small id="psuControlHelp" class="form-text text-muted">
                       <code><strong>AUTO_POWER_CHAMBER_TEMP</strong></code>
                       Turn on PSU over this temperature.
+                    </small>
+                  </div>
+
+                  <!-- <div class="row my-5">
+                    <div class="col-6 text-left">
+                      <button type="button" class="btn btn-primary">
+                        Prev Step
+                      </button>
+                    </div>
+                    <div class="col-6 text-right">
+                      <button type="submit" class="btn btn-success mr-2">
+                        Save
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Next Step
+                      </button>
+                    </div>
+                  </div> -->
+                </form>
+              </ng-container>
+
+              <ng-container>
+                <h4 class="section-heading" #temp_info>
+                  <span class="badge badge-secondary mr-2">Step 6</span
+                  >Configure Thermal Settings
+                </h4>
+                <p>
+                  Temperature sensors are vital components in a 3D printer. Fast
+                  and accurate sensors ensure that the temperature will be well
+                  controlled, to keep plastic flowing smoothly and to prevent
+                  mishaps. Use these settings to specify the hotend and bed
+                  temperature sensors. Every 3D printer will have a hotend
+                  thermistor, and most will have a bed thermistor.
+                </p>
+                <p>
+                  The listing above these options in
+                  <code>Configuration.h</code> contains all the thermistors and
+                  thermocouples that Marlin knows and supports. Try to match
+                  your brand and model with one of the sensors in the list. If
+                  no match is found, use a profile for a similar sensor of the
+                  same brand, or try “1” – the generic profile. Each profile is
+                  calibrated for a particular temperature sensor so it’s
+                  important to be as precise as possible.
+                </p>
+                <form>
+                  <!-- 0 -->
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <label
+                          class="input-group-text"
+                          for="exampleFormControlSelect4"
+                          >Sensor 0</label
+                        >
+                      </div>
+                      <select
+                        class="form-control custom-select"
+                        id="exampleFormControlSelect4"
+                        aria-describedby="thermalSensor0Help"
+                      >
+                        <option>0: not used</option>
+                        <option selected
+                          >1: 100k thermistor - best choice for EPCOS 100k (4.7k
+                          pullup)</option
+                        >
+                      </select>
+                    </div>
+                    <small id="thermalSensor0Help" class="form-text text-muted">
+                      <code><strong>TEMP_SENSOR_0</strong></code>
+                    </small>
+                  </div>
+
+                  <!-- 1 -->
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <label
+                          class="input-group-text"
+                          for="exampleFormControlSelect5"
+                          >Sensor 1</label
+                        >
+                      </div>
+                      <select
+                        class="form-control custom-select"
+                        id="exampleFormControlSelect5"
+                        aria-describedby="thermalSensor1Help"
+                      >
+                        <option>0: not used</option>
+                        <option
+                          >1: 100k thermistor - best choice for EPCOS 100k (4.7k
+                          pullup)</option
+                        >
+                      </select>
+                    </div>
+                    <small id="thermalSensor1Help" class="form-text text-muted">
+                      <code><strong>TEMP_SENSOR_1</strong></code>
+                    </small>
+                  </div>
+
+                  <!-- 2 -->
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <label
+                          class="input-group-text"
+                          for="exampleFormControlSelect6"
+                          >Sensor 2</label
+                        >
+                      </div>
+                      <select
+                        class="form-control custom-select"
+                        id="exampleFormControlSelect6"
+                        aria-describedby="thermalSensor2Help"
+                      >
+                        <option>0: not used</option>
+                        <option
+                          >1: 100k thermistor - best choice for EPCOS 100k (4.7k
+                          pullup)</option
+                        >
+                      </select>
+                    </div>
+                    <small id="thermalSensor2Help" class="form-text text-muted">
+                      <code><strong>TEMP_SENSOR_2</strong></code>
+                    </small>
+                  </div>
+
+                  <!-- 3 -->
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <label
+                          class="input-group-text"
+                          for="exampleFormControlSelect7"
+                          >Sensor 3</label
+                        >
+                      </div>
+                      <select
+                        class="form-control custom-select"
+                        id="exampleFormControlSelect7"
+                        aria-describedby="thermalSensor3Help"
+                      >
+                        <option>0: not used</option>
+                        <option
+                          >1: 100k thermistor - best choice for EPCOS 100k (4.7k
+                          pullup)</option
+                        >
+                      </select>
+                    </div>
+                    <small id="thermalSensor3Help" class="form-text text-muted">
+                      <code><strong>TEMP_SENSOR_3</strong></code>
+                    </small>
+                  </div>
+
+                  <!-- 4 -->
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <label
+                          class="input-group-text"
+                          for="exampleFormControlSelect8"
+                          >Sensor 4</label
+                        >
+                      </div>
+                      <select
+                        class="form-control custom-select"
+                        id="exampleFormControlSelect8"
+                        aria-describedby="thermalSensor4Help"
+                      >
+                        <option>0: not used</option>
+                        <option
+                          >1: 100k thermistor - best choice for EPCOS 100k (4.7k
+                          pullup)</option
+                        >
+                      </select>
+                    </div>
+                    <small id="thermalSensor4Help" class="form-text text-muted">
+                      <code><strong>TEMP_SENSOR_4</strong></code>
+                    </small>
+                  </div>
+
+                  <!-- 5 -->
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <label
+                          class="input-group-text"
+                          for="exampleFormControlSelect9"
+                          >Sensor 5</label
+                        >
+                      </div>
+                      <select
+                        class="form-control custom-select"
+                        id="exampleFormControlSelect9"
+                        aria-describedby="thermalSensor5Help"
+                      >
+                        <option>0: not used</option>
+                        <option
+                          >1: 100k thermistor - best choice for EPCOS 100k (4.7k
+                          pullup)</option
+                        >
+                      </select>
+                    </div>
+                    <small id="thermalSensor5Help" class="form-text text-muted">
+                      <code><strong>TEMP_SENSOR_5</strong></code>
+                    </small>
+                  </div>
+
+                  <!-- 6 -->
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <label
+                          class="input-group-text"
+                          for="exampleFormControlSelect10"
+                          >Sensor 6</label
+                        >
+                      </div>
+                      <select
+                        class="form-control custom-select"
+                        id="exampleFormControlSelect10"
+                        aria-describedby="thermalSensor6Help"
+                      >
+                        <option>0: not used</option>
+                        <option
+                          >1: 100k thermistor - best choice for EPCOS 100k (4.7k
+                          pullup)</option
+                        >
+                      </select>
+                    </div>
+                    <small id="thermalSensor6Help" class="form-text text-muted">
+                      <code><strong>TEMP_SENSOR_6</strong></code>
+                    </small>
+                  </div>
+
+                  <!-- 7 -->
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <label
+                          class="input-group-text"
+                          for="exampleFormControlSelect11"
+                          >Sensor 7</label
+                        >
+                      </div>
+                      <select
+                        class="form-control custom-select"
+                        id="exampleFormControlSelect11"
+                        aria-describedby="thermalSensor7Help"
+                      >
+                        <option>0: not used</option>
+                        <option
+                          >1: 100k thermistor - best choice for EPCOS 100k (4.7k
+                          pullup)</option
+                        >
+                      </select>
+                    </div>
+                    <small id="thermalSensor7Help" class="form-text text-muted">
+                      <code><strong>TEMP_SENSOR_7</strong></code>
+                    </small>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <label
+                          class="input-group-text"
+                          for="exampleFormControlSelect12"
+                          >Sensor for BED</label
+                        >
+                      </div>
+                      <select
+                        class="form-control custom-select"
+                        id="exampleFormControlSelect12"
+                        aria-describedby="thermalSensor8Help"
+                      >
+                        <option>0: not used</option>
+                        <option
+                          >1: 100k thermistor - best choice for EPCOS 100k (4.7k
+                          pullup)</option
+                        >
+                      </select>
+                    </div>
+                    <small id="thermalSensor8Help" class="form-text text-muted">
+                      <code><strong>TEMP_SENSOR_BED</strong></code>
+                    </small>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <label
+                          class="input-group-text"
+                          for="exampleFormControlSelect13"
+                          >Sensor PROBE</label
+                        >
+                      </div>
+                      <select
+                        class="form-control custom-select"
+                        id="exampleFormControlSelect13"
+                        aria-describedby="thermalSensor9Help"
+                      >
+                        <option>0: not used</option>
+                        <option
+                          >1: 100k thermistor - best choice for EPCOS 100k (4.7k
+                          pullup)</option
+                        >
+                      </select>
+                    </div>
+                    <small id="thermalSensor9Help" class="form-text text-muted">
+                      <code><strong>TEMP_SENSOR_PROBE</strong></code>
+                    </small>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <label
+                          class="input-group-text"
+                          for="exampleFormControlSelect14"
+                          >Sensor for CHAMBER</label
+                        >
+                      </div>
+                      <select
+                        class="form-control custom-select"
+                        id="exampleFormControlSelect14"
+                        aria-describedby="thermalSensor10Help"
+                      >
+                        <option>0: not used</option>
+                        <option
+                          >1: 100k thermistor - best choice for EPCOS 100k (4.7k
+                          pullup)</option
+                        >
+                      </select>
+                    </div>
+                    <small
+                      id="thermalSensor10Help"
+                      class="form-text text-muted"
+                    >
+                      <code><strong>TEMP_SENSOR_CHAMBER</strong></code>
+                    </small>
+                  </div>
+
+                  <p>
+                    Marlin provides two dummy sensors for testing purposes. Set
+                    their constant temperature readings here.
+                  </p>
+
+                  <div class="form-group">
+                    <label for="exampleInputText1"
+                      >Dummy thermistor 998 Sensor Temperature</label
+                    >
+                    <input
+                      type="range"
+                      min="10"
+                      max="100"
+                      value="25"
+                      step="1"
+                      class="form-control-range custom-range"
+                      id="formControlRange"
+                    />
+
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text bg-success text-white">
+                          10°C
+                        </div>
+                      </div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="exampleInputText1"
+                        aria-describedby="autoPowerTempHelp"
+                        placeholder="Temperature"
+                        value="25"
+                        readonly
+                      />
+                      <div class="input-group-append">
+                        <span class="input-group-text bg-danger text-white"
+                          >100°C</span
+                        >
+                      </div>
+                    </div>
+                    <small id="thermalSensor9Help" class="form-text text-muted">
+                      <code><strong>DUMMY_THERMISTOR_998_VALUE</strong></code>
+                    </small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleInputText1"
+                      >Dummy thermistor 999 Sensor Temperature</label
+                    >
+                    <input
+                      type="range"
+                      min="10"
+                      max="100"
+                      value="100"
+                      step="1"
+                      class="form-control-range custom-range"
+                      id="formControlRange"
+                    />
+
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text bg-success text-white">
+                          10°C
+                        </div>
+                      </div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="exampleInputText1"
+                        aria-describedby="autoPowerTempHelp"
+                        placeholder="Temperature"
+                        value="100"
+                        readonly
+                      />
+                      <div class="input-group-append">
+                        <span class="input-group-text bg-danger text-white"
+                          >100°C</span
+                        >
+                      </div>
+                    </div>
+                    <small id="thermalSensor9Help" class="form-text text-muted">
+                      <code><strong>DUMMY_THERMISTOR_999_VALUE</strong></code>
+                    </small>
+                  </div>
+
+                  <div class="form-group custom-control custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      aria-describedby="redundantSensor1Help"
+                      id="exampleCheck26"
+                    />
+                    <label class="custom-control-label" for="exampleCheck26"
+                      >Enable Sensor 1 as Redundant Temperature Sensor for
+                      Sensor 0</label
+                    >
+                    <small
+                      id="redundantSensor1Help"
+                      class="form-text text-muted"
+                    >
+                      <code><strong>TEMP_SENSOR_1_AS_REDUNDANT</strong></code>
+                      Enable this option to use sensor 1 as a redundant sensor
+                      for sensor 0. This is an advanced way to protect against
+                      temp sensor failure. If the temperature difference between
+                      sensors exceeds
+                      <code>MAX_REDUNDANT_TEMP_SENSOR_DIFF</code> Marlin will
+                      abort the print and disable the heater.
+                    </small>
+                  </div>
+
+                  <div class="form-group tab-2">
+                    <label for="exampleInputText1"
+                      >Max Redundant Temperature Difference</label
+                    >
+                    <input
+                      type="range"
+                      min="10"
+                      max="100"
+                      value="10"
+                      step="1"
+                      class="form-control-range custom-range"
+                      id="formControlRange"
+                    />
+
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text bg-success text-white">
+                          10°C
+                        </div>
+                      </div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="exampleInputText1"
+                        aria-describedby="autoPowerTempHelp"
+                        placeholder="Temperature"
+                        value="10"
+                        readonly
+                      />
+                      <div class="input-group-append">
+                        <span class="input-group-text bg-danger text-white"
+                          >100°C</span
+                        >
+                      </div>
+                    </div>
+                    <small id="thermalSensor9Help" class="form-text text-muted">
+                      <code
+                        ><strong>MAX_REDUNDANT_TEMP_SENSOR_DIFF</strong></code
+                      >
                     </small>
                   </div>
 
@@ -1192,7 +1709,7 @@
                       >Check me out</label
                     >
                   </div>
-                  
+
                   <div class="text-right">
                     <button type="submit" class="btn btn-success mr-2">
                       Finish & Download

@@ -32,7 +32,20 @@ app.get("/boardsList", (req, res, next) => {
     code: "OK",
     message: "Aahaa! Crispy list of boards",
     data: {
-      boards: constants[configVersion],
+      boards: constants.boards[configVersion],
+      configuration_version: configVersion,
+    },
+  });
+});
+
+// Thermal Sensor List
+app.get("/thermalSensorCodeList", (req, res, next) => {
+  let configVersion = req.query.version;
+  res.json({
+    code: "OK",
+    message: "Aahaa! Crispy list of sensor code",
+    data: {
+      boards: constants.thermal_sensors[configVersion],
       configuration_version: configVersion,
     },
   });

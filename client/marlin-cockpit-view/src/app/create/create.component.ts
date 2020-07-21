@@ -42,6 +42,13 @@ export class CreateComponent implements OnInit {
       title: 'PSU Info',
       subTitle: 'PSU Configuration',
     },
+    {
+      no: 6,
+      id: 'temp_info',
+      icon: 'cable.png',
+      title: 'Thermal Setting',
+      subTitle: 'Temperature Configuration',
+    },
     // {
     //   no: 4,
     //   icon: '',
@@ -55,6 +62,7 @@ export class CreateComponent implements OnInit {
   @ViewChild('hardware_info') hardware_info: ElementRef;
   @ViewChild('extruder_info') extruder_info: ElementRef;
   @ViewChild('psu_info') psu_info: ElementRef;
+  @ViewChild('temp_info') temp_info: ElementRef;
   constructor() {}
 
   ngOnInit(): void {}
