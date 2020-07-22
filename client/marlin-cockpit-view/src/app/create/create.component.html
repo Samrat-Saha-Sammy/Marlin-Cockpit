@@ -1648,6 +1648,29 @@
                     </small>
                   </div>
 
+                  <div class="form-group">
+                  <label for="exampleInputNo1"
+                      >Temperature Residency Time</label
+                    >
+                    <div class="input-group">
+                    
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Seconds</span>
+                    </div>
+                    <input
+                      type="number"
+                      min="3"
+                      class="form-control"
+                      id="exampleInputNo1"
+                      aria-describedby="tempResiHelp"
+                      placeholder="10"
+                    />
+                  </div>
+                    <small id="tempResiHelp" class="form-text text-muted">
+                      <code><strong>TEMP_RESIDENCY_TIME</strong></code> Extruders must maintain a stable temperature for <code>TEMP_RESIDENCY_TIME<code> before M109 will return success and start the print. Tune what “stable” means using <code>TEMP_HYSTERESIS</code> and <code>TEMP_WINDOW</code>.
+                    </small>
+                  </div>
+
                   <!-- <div class="row my-5">
                     <div class="col-6 text-left">
                       <button type="button" class="btn btn-primary">
