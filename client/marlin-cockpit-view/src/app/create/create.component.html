@@ -1666,26 +1666,51 @@
                       placeholder="10"
                     />
                   </div>
-                    <small id="tempResiHelp" class="form-text text-muted">
+                    <!-- <small id="tempResiHelp" class="form-text text-muted">
                       <code><strong>TEMP_RESIDENCY_TIME</strong></code> Extruders must maintain a stable temperature for <code>TEMP_RESIDENCY_TIME<code> before M109 will return success and start the print. Tune what “stable” means using <code>TEMP_HYSTERESIS</code> and <code>TEMP_WINDOW</code>.
-                    </small>
+                    </small> -->
                   </div>
 
-                  <!-- <div class="row my-5">
-                    <div class="col-6 text-left">
-                      <button type="button" class="btn btn-primary">
-                        Prev Step
-                      </button>
+                  <div class="form-group">
+                    <label for="exampleInputText3"
+                      >Bed Temperature Hysteresis</label
+                    >
+                    <input
+                      type="range"
+                      min="0"
+                      max="50"
+                      value="3"
+                      step="1"
+                      class="form-control-range custom-range"
+                      id="formControlRange"
+                    />
+
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text bg-success text-white">
+                          0°C
+                        </div>
+                      </div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="exampleInputText3"
+                        aria-describedby="tempBedHysHelp"
+                        placeholder="Temperature"
+                        value="3"
+                        readonly
+                      />
+                      <div class="input-group-append">
+                        <span class="input-group-text bg-danger text-white"
+                          >50°C</span
+                        >
+                      </div>
                     </div>
-                    <div class="col-6 text-right">
-                      <button type="submit" class="btn btn-success mr-2">
-                        Save
-                      </button>
-                      <button type="button" class="btn btn-primary">
-                        Next Step
-                      </button>
-                    </div>
-                  </div> -->
+                    <small id="tempBedHysHelp" class="form-text text-muted">
+                      <code
+                        ><strong>TEMP_BED_HYSTERESIS</strong></code
+                      >
+                    </small>
                 </form>
               </ng-container>
 
